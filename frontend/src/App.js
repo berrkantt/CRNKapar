@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import axios from 'axios';
 
 function App() {
 
@@ -8,6 +9,7 @@ function App() {
     const crn = e.target.crn.value;
     const token = e.target.token.value;
     console.log("İstenen CRN'ler: " + crn, "\n", "Token: " + token)
+    axios.post("http://localhost:5000/api", { "crn": crn, "token": token })
   }
 
 
@@ -26,15 +28,15 @@ function App() {
       </form>
       <br></br><br></br>
       <br></br><br></br>
-    
-      <iframe 
-      width="560" 
-      height="315" 
-      src="https://www.youtube.com/embed/0Kyl2WakR1w" 
-      title="YouTube video player" 
-      frameBorder="0" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-      allowFullScreen></iframe>
+
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/0Kyl2WakR1w"
+        title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen></iframe>
 
 
       {" "}
