@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import axios from 'axios';
 
@@ -9,12 +8,10 @@ function App() {
     const crn = e.target.crn.value;
     const token = e.target.token.value;
     console.log("İstenen CRN'ler: " + crn, "\n", "Token: " + token)
-    axios.post("http://localhost:5000/api", { "crn": crn, "token": token })
+    axios.post("http://127.0.0.1:5000/api", { "crn": crn, "token": token })
   }
 
-
   return (
-
 
     <div>
       <header>ITU</header>
@@ -28,20 +25,21 @@ function App() {
       </form>
       <br></br><br></br>
       <br></br><br></br>
-
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/0Kyl2WakR1w"
-        title="YouTube video player"
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen></iframe>
-
+        
+        <iframe width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/yrEDjCA9YPc" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+        </iframe>
 
       {" "}
     </div>
+
   );
+ 
 }
 
 export default App;
